@@ -1,153 +1,638 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-  </head>  
-  <body>
-    <header>
-    <nav class="nav-bar">
-        <h1>Portfolio</h1>
-        <div>
-            <ul class="list">
-             <li><a href="#Home">Home</a></li>
-             <li><a href="#Education">Education</a></li>
-             <li><a href="#Skills">Skills</a></li>
-             <li><a href="#Projects">Projects</a></li>
-             <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="HariKrishna Prasad - Frontend Developer Portfolio">
+
+  <title>HariKrishna Prasad | Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+
+    <nav class="navbar container">
+
+      <a href="#Home" class="logo">
+        <span class="logo-icon">H.</span>
+        <span class="logo-text">Hari<span class="accent">Krishna</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#Home" class="nav-link active">Home</a></li>
+        <li><a href="#Education" class="nav-link">Education</a></li>
+        <li><a href="#Skills" class="nav-link">Skills</a></li>
+        <li><a href="#Projects" class="nav-link">Projects</a></li>
+        <li><a href="#Contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </nav>
-    <nav class="navbar-menu">
-        <h1>Portfolio</h1>
-        <img id="hamburger" src="images/menubar.jpg">
-        <div>
-            <ul class="list2">
-             <li><a href="#Home">Home</a></li>
-             <li><a href="#Education">Education</a></li>
-             <li><a href="#Skills">Skills</a></li>
-             <li><a href="#Projects">Projects</a></li>
-             <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    </header>
-    <section class="sec1" id="Home">
-        <div class="img">
-            <img src="images/profile.png.jpg">
-        </div>
-        <div class="sum">
-            <p class="hello">Hello,I'm </p>
-            <h1>HariKrishna Prasad</h1>
-            <span> Frontend Developer </span>
-            <p>I'm a Front-End Developer passionate about crafting fast, responsive, and user-friendly websites. I specialize in HTML, CSS, JavaScript, and modern frameworks like React. My goal is to build intuitive digital experiences that look great and perform even better.</p>
-            <div class="social">
-                <a href="https://www.linkedin.com/in/vankayalapati-harikrishna-prasad-5b3819313"><img src="images/icons8-linkedin-48.png"></a>
-                <a href="https://github.com/harikrishna-118"><img src="images/github.png"></a>
+
+  </header>
+
+  <main>
+
+    <!-- Home Section -->
+    <section class="hero section" id="Home">
+
+      <div class="hero-glow"></div>
+
+      <div class="container hero-container">
+
+        <div class="hero-content reveal">
+
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Open to Opportunities
+          </div>
+
+          <p class="hero-greeting">HELLO, I'M</p>
+
+          <h1 class="hero-title">
+            HariKrishna
+            <span>Prasad.</span>
+          </h1>
+
+          <div class="hero-role">
+            <span class="role-line"></span>
+            <h2>Frontend Developer</h2>
+          </div>
+
+          <p class="hero-description">
+            I'm a passionate Frontend Developer who loves building
+            modern, responsive, and user-friendly web experiences.
+            I specialize in HTML, CSS, JavaScript, and React.js,
+            transforming creative ideas into functional websites.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#Projects" class="primary-btn">
+              Explore My Work
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#Contact" class="secondary-btn">
+              Contact Me
+            </a>
+
+          </div>
+
+          <div class="hero-social">
+
+            <span>FIND ME ON</span>
+
+            <div class="social-links">
+
+              <a
+                href="https://www.linkedin.com/in/vankayalapati-harikrishna-prasad-5b3819313"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <img src="images/icons8-linkedin-48.png" alt="LinkedIn">
+              </a>
+
+              <a
+                href="https://github.com/harikrishna-118"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <img src="images/github.png" alt="GitHub">
+              </a>
+
             </div>
+
+          </div>
+
         </div>
+
+        <div class="hero-visual reveal">
+
+          <div class="profile-decoration decoration-one"></div>
+          <div class="profile-decoration decoration-two"></div>
+
+          <div class="profile-wrapper">
+
+            <div class="profile-ring">
+
+              <img
+                src="images/profile.png.jpg"
+                alt="HariKrishna Prasad"
+                class="profile-image"
+              >
+
+            </div>
+
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span class="floating-icon">✦</span>
+            <div>
+              <strong>Frontend</strong>
+              <small>Development</small>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span class="floating-icon">⚡</span>
+            <div>
+              <strong>React.js</strong>
+              <small>Web Applications</small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a href="#Education" class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+
     </section>
-     <section class="sec2" id="Education">
-      <div>
-        <h1 class="education">Education</h1>
-        <div class="degree">
-          <h1>Degree (Bsc, Data Science)</h1>
-          <h2>Jagarlamudi Kuppuswamy Choudary College, Guntur</h2>
-          <p>2021-2024</p>
-        </div>
-        <div class="inter">
-          <h1>Intermediate</h1>
-          <h2>N.R.I Junior College, Vijayawada</h2>
-          <p>2019-2021</p>
-        </div>
-        <div class="sec">
-          <h1>Secondary Education (10th)</h1>
-          <h2>Z.P.High School, Vinukonda</h2>
-          <p>2018-2019</p>
-        </div>
-      </div>
-    </section>
-    <section class="sec3" id="Skills">
-      <div>
-        <h1>Skills</h1>
-      </div>
-      <div class="skills">
-       <div>
-       <img src="images/html.png">
-       <h2>HTML</h2>
-       </div>
-       <div>
-       <img src="images/css.png">
-       <h2>CSS</h2>
-       </div>
-       <div class="js">
-       <img src="images/java-script.png">
-       <h2>JAVA SCRIPT</h2>
-       </div>
-       <div>
-       <img src="images/react.png">
-       <h2>REACT JS</h2>
-       </div>
-       <div>
-       <img src="images/github.png">
-       <h2>GIT HUB</h2>
-       </div>
-       <div>
-       <img src="images/python.png">
-       <h2>PYTHON</h2>
-       </div>
-      </div>
-    </section>
-    <section class="sec4" id="Projects">
-      <h1>Projects</h1>
-    <div class="projects">
-      <div class="project">
-        <img src="images/portfolio.jpg.jpeg">
-        <p><b>Portfolio Website</b></p>
-        <P>Built using HTML, CSS, JavaScript</P>
-        <div class="btn">
-          <button><a href="https://hari-krishna-prasad-portfolio.netlify.app/">Live Project</a></button>
-          <button><a href="https://github.com/harikrishna-118/My-Portfolio">GitHub</a></button>
-        </div>
-      </div>
-      <div class="project">
-        <img src="images/weatherapp.jpg.jpeg">
-        <p><b>Weather App</b></p>
-        <P>Built using React & OpenWeather API</P>
-        <div class="btn">
-          <button><a href="https://weather-app2026.netlify.app/">Live Project</a></button>
-          <button><a href="https://github.com/harikrishna-118/React-weather-app">GitHub</a></button>
-        </div>
-      </div>
-      <div class="project">
-        <img src="images/e-commerce.jpg.jpeg">
-        <p><b>E-commerce website</b></p>
-        <P>Built using React & Dummy Json</P>
-        <div class="btn">
-          <button><a href="https://go-buy.netlify.app/">Live Project</a></button>
-          <button><a href="https://github.com/harikrishna-118/e-commerce-website">GitHub</a></button>
-        </div>
-      </div>
+
+   
+<!-- EDUCATION SECTION -->
+<section class="education-section section" id="Education">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <span class="section-tag">01 / EDUCATION</span>
+      <h2>My <span>Education</span></h2>
+      <p>My academic journey from school to postgraduate studies.</p>
     </div>
-    </section>
-    <section class="sec5" id="Contact">
-      <h1>Contact</h1>
-      <div class="contact">
-        <div class="mail">
-          <img src="images/communication.png">
-          <a href="mailto:harikrishnaprasad118@gmail.com">G-mail</a>
-        </div>
-        <div class="linkdin">
-          <img src="images/icons8-linkedin-48.png">
-          <a href="https://www.linkedin.com/in/vankayalapati-harikrishna-prasad-5b3819313">Linkedin</a>
-        </div>
-        <div class="telegram">
-          <img src="images/telegram.png">
-          <a href="https://t.me/harikrishna118">Telegram</a>
+
+    <div class="education-timeline" id="educationTimeline">
+
+      <div class="timeline-progress" id="timelineProgress"></div>
+
+      <!-- 10th -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+          <span class="timeline-year">2018 — 2019</span>
+          <span class="timeline-label">SECONDARY EDUCATION</span>
+
+          <h3>Secondary Education (10th)</h3>
+
+          <p>Z.P. High School, Vinukonda</p>
+
+          <span class="timeline-number">01</span>
         </div>
       </div>
+
+      <!-- Intermediate -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+          <span class="timeline-year">2019 — 2021</span>
+          <span class="timeline-label">HIGHER SECONDARY</span>
+
+          <h3>Intermediate</h3>
+
+          <p>N.R.I Junior College, Vijayawada</p>
+
+          <span class="timeline-number">02</span>
+        </div>
+      </div>
+
+      <!-- Degree -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+          <span class="timeline-year">2021 — 2024</span>
+          <span class="timeline-label">BACHELOR'S DEGREE</span>
+
+          <h3>B.Sc. Data Science</h3>
+
+          <p>
+            Jagarlamudi Kuppuswamy Choudary College,
+            Guntur
+          </p>
+
+          <span class="timeline-number">03</span>
+        </div>
+      </div>
+
+      <!-- MCA -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+          <span class="timeline-year">2024 — 2026</span>
+          <span class="timeline-label">MASTER'S DEGREE</span>
+
+          <h3>Master of Computer Applications (MCA)</h3>
+
+          <p>
+            R.V. Institute of Technology, Chebrolu
+          </p>
+
+          <span class="timeline-number">04</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills -->
+    <section class="skills-section section" id="Skills">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-tag">02 / TECHNICAL SKILLS</span>
+          <h2>My <span>Expertise</span></h2>
+          <p>Technologies and tools I use to build web experiences.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/html.png" alt="HTML">
+            </div>
+            <h3>HTML5</h3>
+            <p>Structure & Semantics</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/css.png" alt="CSS">
+            </div>
+            <h3>CSS3</h3>
+            <p>Styling & Responsive Design</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/java-script.png" alt="JavaScript">
+            </div>
+            <h3>JavaScript</h3>
+            <p>Interactive Web Development</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/react.png" alt="React">
+            </div>
+            <h3>React.js</h3>
+            <p>Component-Based UI</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/github.png" alt="GitHub">
+            </div>
+            <h3>GitHub</h3>
+            <p>Version Control</p>
+          </div>
+
+          <div class="skill-card reveal">
+            <div class="skill-icon">
+              <img src="images/python.png" alt="Python">
+            </div>
+            <h3>Python</h3>
+            <p>Programming Fundamentals</p>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
-    <script src="script.js"></script>
-  </body>
+
+    <!-- Projects -->
+    <section class="projects-section section" id="Projects">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="section-tag">03 / SELECTED WORK</span>
+          <h2>Featured <span>Projects</span></h2>
+          <p>A collection of projects I've built using modern technologies.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Portfolio Project -->
+          <article class="project-card reveal">
+
+            <div class="project-image">
+              <img
+                src="images/portfolio.jpg.jpeg"
+                alt="Portfolio Website Screenshot"
+                loading="lazy"
+              >
+              <span class="project-index">01</span>
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <h3>Portfolio Website</h3>
+
+              <p>
+                A responsive personal portfolio showcasing
+                my skills, education, and projects with a
+                clean and intuitive interface.
+              </p>
+
+              <div class="project-actions">
+
+                <a
+                  href="https://hari-krishna-prasad-portfolio.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-live"
+                >
+                  Live Project ↗
+                </a>
+
+                <a
+                  href="https://github.com/harikrishna-118/My-Portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-github"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Weather App -->
+          <article class="project-card reveal">
+
+            <div class="project-image">
+              <img
+                src="images/weatherapp.jpg.jpeg"
+                alt="Weather Application Screenshot"
+                loading="lazy"
+              >
+              <span class="project-index">02</span>
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-tech">
+                <span>React.js</span>
+                <span>CSS</span>
+                <span>REST API</span>
+              </div>
+
+              <h3>Weather Application</h3>
+
+              <p>
+                A weather application providing real-time
+                weather information and forecasts through
+                OpenWeather API integration.
+              </p>
+
+              <div class="project-actions">
+
+                <a
+                  href="https://weather-app2026.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-live"
+                >
+                  Live Project ↗
+                </a>
+
+                <a
+                  href="https://github.com/harikrishna-118/React-weather-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-github"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- E-Commerce -->
+          <article class="project-card reveal">
+
+            <div class="project-image">
+              <img
+                src="images/e-commerce.jpg.jpeg"
+                alt="E-Commerce Website Screenshot"
+                loading="lazy"
+              >
+              <span class="project-index">03</span>
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-tech">
+                <span>React.js</span>
+                <span>CSS</span>
+                <span>DummyJSON API</span>
+              </div>
+
+              <h3>E-Commerce Website</h3>
+
+              <p>
+                A responsive shopping application with
+                product listings, category filtering,
+                product details, and shopping cart features.
+              </p>
+
+              <div class="project-actions">
+
+                <a
+                  href="https://go-buy.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-live"
+                >
+                  Live Project ↗
+                </a>
+
+                <a
+                  href="https://github.com/harikrishna-118/e-commerce-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-github"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section section" id="Contact">
+
+      <div class="container">
+
+        <div class="contact-wrapper reveal">
+
+          <div class="contact-content">
+
+            <span class="section-tag">04 / GET IN TOUCH</span>
+
+            <h2>
+              Let's Build
+              <span>Something Great.</span>
+            </h2>
+
+            <p>
+              I'm open to frontend development opportunities
+              and exciting projects. Feel free to reach out
+              and let's connect.
+            </p>
+
+            <a
+              href="mailto:harikrishnaprasad118@gmail.com"
+              class="primary-btn"
+            >
+              Say Hello ↗
+            </a>
+
+          </div>
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:harikrishnaprasad118@gmail.com"
+              class="contact-item"
+            >
+              <div class="contact-icon">
+                <img src="images/communication.png" alt="">
+              </div>
+
+              <div class="contact-info">
+                <span>EMAIL</span>
+                <h3>Gmail</h3>
+              </div>
+
+              <span class="contact-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vankayalapati-harikrishna-prasad-5b3819313"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-item"
+            >
+              <div class="contact-icon">
+                <img src="images/icons8-linkedin-48.png" alt="">
+              </div>
+
+              <div class="contact-info">
+                <span>PROFESSIONAL NETWORK</span>
+                <h3>LinkedIn</h3>
+              </div>
+
+              <span class="contact-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://t.me/harikrishna118"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-item"
+            >
+              <div class="contact-icon">
+                <img src="images/telegram.png" alt="">
+              </div>
+
+              <div class="contact-info">
+                <span>DIRECT MESSAGE</span>
+                <h3>Telegram</h3>
+              </div>
+
+              <span class="contact-arrow">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <a href="#Home" class="footer-logo">
+        Hari<span>Krishna.</span>
+      </a>
+
+      <p>© <span id="currentYear"></span> HariKrishna Prasad. All rights reserved.</p>
+
+      <a href="#Home" class="back-to-top">
+        Back to Top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
 </html>

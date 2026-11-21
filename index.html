@@ -5,13 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f4f5f7">
-  <meta name="description" content="Hari Krishna Prasad - Frontend Developer Portfolio">
+  <meta
+    name="description"
+    content="Hari Krishna Prasad - Frontend Developer Portfolio"
+  >
 
   <title>Hari Krishna Prasad | Frontend Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -60,28 +66,57 @@
         <div class="hero-content reveal">
 
           <div class="availability">
-            Open to Opportunities
+            <span class="availability-dot"></span>
+            <span>Open to Opportunities</span>
           </div>
 
           <p class="hero-greeting">HELLO, I'M</p>
 
-          <h1 class="hero-title">
-            <span class="hero-name">Hari Krishna</span>
-            <span class="hero-surname">Prasad.</span>
+          <!-- Name animation -->
+          <h1
+            class="hero-title"
+            aria-label="Hari Krishna Prasad"
+          >
+            <span
+              class="hero-name animated-name"
+              data-text="Hari Krishna"
+              aria-hidden="true"
+            >Hari Krishna</span>
+
+            <span
+              class="hero-surname animated-name"
+              data-text="Prasad."
+              aria-hidden="true"
+            >Prasad.</span>
           </h1>
 
+          <!-- Puzzle animation -->
           <div class="hero-role">
-            <h2>
-              <span>Frontend</span> Developer
+            <h2
+              class="puzzle-role"
+              aria-label="Frontend Developer"
+            >
+              <span
+                class="role-orange"
+                data-final="Frontend"
+                aria-hidden="true"
+              >Frontend</span>
+
+              <span
+                class="role-dark"
+                data-final="Developer"
+                aria-hidden="true"
+              >Developer</span>
             </h2>
           </div>
 
-          <p class="hero-description">
-            I'm a passionate Frontend Developer who loves building
-            modern, responsive, and user-friendly web experiences.
-            I specialize in HTML, CSS, JavaScript, and React.js,
-            transforming creative ideas into functional websites.
-          </p>
+          <!-- Typing animation -->
+          <p
+            class="hero-description typing-description"
+            id="typingDescription"
+            data-text="I'm a passionate Frontend Developer who loves building modern, responsive, and user-friendly web experiences. I specialize in HTML, CSS, JavaScript, and React.js, transforming creative ideas into functional websites."
+            aria-label="I'm a passionate Frontend Developer who loves building modern, responsive, and user-friendly web experiences. I specialize in HTML, CSS, JavaScript, and React.js, transforming creative ideas into functional websites."
+          >I'm a passionate Frontend Developer who loves building modern, responsive, and user-friendly web experiences. I specialize in HTML, CSS, JavaScript, and React.js, transforming creative ideas into functional websites.</p>
 
           <div class="hero-buttons">
             <a href="#Projects" class="primary-btn">
@@ -103,7 +138,10 @@
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <img src="images/icons8-linkedin-48.png" alt="">
+                <img
+                  src="images/icons8-linkedin-48.png"
+                  alt=""
+                >
               </a>
 
               <a
@@ -143,48 +181,79 @@
         </div>
 
         <div class="education-timeline" id="educationTimeline">
-          <div class="timeline-progress" id="timelineProgress"></div>
+          <div
+            class="timeline-progress"
+            id="timelineProgress"
+          ></div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
               <span class="timeline-year">2018 - 2019</span>
-              <span class="timeline-label">SECONDARY EDUCATION</span>
+              <span class="timeline-label">
+                SECONDARY EDUCATION
+              </span>
+
               <h3>Secondary Education (10th)</h3>
               <p>Z.P. High School, Vinukonda</p>
+
               <span class="timeline-number">01</span>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
               <span class="timeline-year">2019 - 2021</span>
-              <span class="timeline-label">HIGHER SECONDARY</span>
+              <span class="timeline-label">
+                HIGHER SECONDARY
+              </span>
+
               <h3>Intermediate</h3>
               <p>N.R.I Junior College, Vijayawada</p>
+
               <span class="timeline-number">02</span>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
               <span class="timeline-year">2021 - 2024</span>
-              <span class="timeline-label">BACHELOR'S DEGREE</span>
+              <span class="timeline-label">
+                BACHELOR'S DEGREE
+              </span>
+
               <h3>B.Sc. Data Science</h3>
-              <p>Jagarlamudi Kuppuswamy Choudary College, Guntur</p>
+              <p>
+                Jagarlamudi Kuppuswamy Choudary College,
+                Guntur
+              </p>
+
               <span class="timeline-number">03</span>
             </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
               <span class="timeline-year">2024 - 2026</span>
-              <span class="timeline-label">MASTER'S DEGREE</span>
-              <h3>Master of Computer Applications (MCA)</h3>
-              <p>R.V. Institute of Technology, Chebrolu</p>
+              <span class="timeline-label">
+                MASTER'S DEGREE
+              </span>
+
+              <h3>
+                Master of Computer Applications (MCA)
+              </h3>
+
+              <p>
+                R.V. Institute of Technology, Chebrolu
+              </p>
+
               <span class="timeline-number">04</span>
             </div>
           </div>
@@ -198,9 +267,16 @@
       <div class="container">
 
         <div class="section-heading reveal">
-          <span class="section-tag">02 / TECHNICAL SKILLS</span>
+          <span class="section-tag">
+            02 / TECHNICAL SKILLS
+          </span>
+
           <h2>My <span>Expertise</span></h2>
-          <p>Technologies and tools I use to build modern web applications.</p>
+
+          <p>
+            Technologies and tools I use to build
+            modern web applications.
+          </p>
         </div>
 
         <div class="skills-grid">
@@ -209,8 +285,10 @@
             <div class="skill-icon">
               <img src="images/html.png" alt="HTML5" loading="lazy">
             </div>
+
             <h3>HTML5</h3>
             <span class="skill-category">WEB STRUCTURE</span>
+
             <p>
               Building semantic, accessible, and well-structured
               web pages using modern HTML elements and best practices.
@@ -221,8 +299,12 @@
             <div class="skill-icon">
               <img src="images/css.png" alt="CSS3" loading="lazy">
             </div>
+
             <h3>CSS3</h3>
-            <span class="skill-category">DESIGN & RESPONSIVENESS</span>
+            <span class="skill-category">
+              DESIGN & RESPONSIVENESS
+            </span>
+
             <p>
               Creating modern layouts with Flexbox, CSS Grid,
               responsive media queries, animations, and transitions.
@@ -231,10 +313,16 @@
 
           <article class="skill-card skill-js reveal">
             <div class="skill-icon">
-              <img src="images/java-script.png" alt="JavaScript" loading="lazy">
+              <img
+                src="images/java-script.png"
+                alt="JavaScript"
+                loading="lazy"
+              >
             </div>
+
             <h3>JavaScript</h3>
             <span class="skill-category">INTERACTIVITY</span>
+
             <p>
               Developing interactive interfaces using DOM manipulation,
               events, asynchronous JavaScript, and APIs.
@@ -243,10 +331,18 @@
 
           <article class="skill-card skill-react reveal">
             <div class="skill-icon">
-              <img src="images/react.png" alt="React.js" loading="lazy">
+              <img
+                src="images/react.png"
+                alt="React.js"
+                loading="lazy"
+              >
             </div>
+
             <h3>React.js</h3>
-            <span class="skill-category">FRONTEND DEVELOPMENT</span>
+            <span class="skill-category">
+              FRONTEND DEVELOPMENT
+            </span>
+
             <p>
               Building reusable components, managing state with
               React Hooks, handling routing, and integrating REST APIs.
@@ -255,10 +351,18 @@
 
           <article class="skill-card skill-github reveal">
             <div class="skill-icon">
-              <img src="images/github.png" alt="GitHub" loading="lazy">
+              <img
+                src="images/github.png"
+                alt="GitHub"
+                loading="lazy"
+              >
             </div>
+
             <h3>Git & GitHub</h3>
-            <span class="skill-category">VERSION CONTROL</span>
+            <span class="skill-category">
+              VERSION CONTROL
+            </span>
+
             <p>
               Managing source code, tracking changes, working with
               repositories, and maintaining organized workflows.
@@ -267,10 +371,16 @@
 
           <article class="skill-card skill-python reveal">
             <div class="skill-icon">
-              <img src="images/python.png" alt="Python" loading="lazy">
+              <img
+                src="images/python.png"
+                alt="Python"
+                loading="lazy"
+              >
             </div>
+
             <h3>Python</h3>
             <span class="skill-category">PROGRAMMING</span>
+
             <p>
               Understanding Python fundamentals, data structures,
               functions, loops, and basic problem-solving techniques.
@@ -286,25 +396,35 @@
       <div class="container">
 
         <div class="section-heading reveal">
-          <span class="section-tag">03 / SELECTED WORK</span>
+          <span class="section-tag">
+            03 / SELECTED WORK
+          </span>
+
           <h2>Featured <span>Projects</span></h2>
-          <p>A collection of projects I've built using frontend technologies.</p>
+
+          <p>
+            A collection of projects I've built using
+            frontend technologies.
+          </p>
         </div>
 
         <div class="projects-grid">
 
-          <!-- PORTFOLIO -->
+          <!-- Portfolio -->
           <article class="project-card reveal">
+
             <div class="project-image">
               <img
-                src="images/portfolio.jpg.jpeg"
+                src="images/portfolio.jpg.png"
                 alt="Portfolio website screenshot"
                 loading="lazy"
               >
+
               <span class="project-index">01</span>
             </div>
 
             <div class="project-content">
+
               <div class="project-tech">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -314,8 +434,9 @@
               <h3>Portfolio Website</h3>
 
               <p>
-                A responsive personal portfolio showcasing my skills,
-                education, and projects with a clean interface.
+                A responsive personal portfolio showcasing
+                my skills, education, and projects with
+                a clean interface.
               </p>
 
               <div class="project-actions">
@@ -337,21 +458,25 @@
                   GitHub
                 </a>
               </div>
+
             </div>
           </article>
 
-          <!-- WEATHER -->
+          <!-- Weather App -->
           <article class="project-card reveal">
+
             <div class="project-image">
               <img
-                src="images/weatherapp.jpg.jpeg"
+                src="images/weatherapp.jpg.png"
                 alt="Weather application screenshot"
                 loading="lazy"
               >
+
               <span class="project-index">02</span>
             </div>
 
             <div class="project-content">
+
               <div class="project-tech">
                 <span>HTML5</span>
                 <span>CSS3</span>
@@ -362,9 +487,9 @@
               <h3>Weather Application</h3>
 
               <p>
-                A responsive weather application built with HTML,
-                CSS, JavaScript, and a weather API. It displays
-                current weather conditions and forecasts.
+                A responsive weather application built
+                with HTML, CSS, JavaScript, and a weather API.
+                It displays current weather conditions and forecasts.
               </p>
 
               <div class="project-actions">
@@ -386,21 +511,25 @@
                   GitHub
                 </a>
               </div>
+
             </div>
           </article>
 
-          <!-- E-COMMERCE -->
+          <!-- E-Commerce -->
           <article class="project-card reveal">
+
             <div class="project-image">
               <img
-                src="images/e-commerce.jpg.jpeg"
+                src="images/e-commerce.jpg.png"
                 alt="E-commerce website screenshot"
                 loading="lazy"
               >
+
               <span class="project-index">03</span>
             </div>
 
             <div class="project-content">
+
               <div class="project-tech">
                 <span>React.js</span>
                 <span>CSS</span>
@@ -433,6 +562,7 @@
                   GitHub
                 </a>
               </div>
+
             </div>
           </article>
 
@@ -447,7 +577,9 @@
         <div class="contact-wrapper reveal">
 
           <div class="contact-content">
-            <span class="section-tag">04 / GET IN TOUCH</span>
+            <span class="section-tag">
+              04 / GET IN TOUCH
+            </span>
 
             <h2>
               Let's Build
@@ -475,7 +607,10 @@
               class="contact-item"
             >
               <div class="contact-icon">
-                <img src="images/communication.png" alt="">
+                <img
+                  src="images/communication.png"
+                  alt=""
+                >
               </div>
 
               <div class="contact-info">
@@ -491,7 +626,10 @@
               class="contact-item"
             >
               <div class="contact-icon">
-                <img src="images/icons8-linkedin-48.png" alt="">
+                <img
+                  src="images/icons8-linkedin-48.png"
+                  alt=""
+                >
               </div>
 
               <div class="contact-info">
@@ -507,7 +645,10 @@
               class="contact-item"
             >
               <div class="contact-icon">
-                <img src="images/telegram.png" alt="">
+                <img
+                  src="images/telegram.png"
+                  alt=""
+                >
               </div>
 
               <div class="contact-info">
@@ -517,8 +658,8 @@
             </a>
 
           </div>
-
         </div>
+
       </div>
     </section>
 

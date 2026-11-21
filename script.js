@@ -1,250 +1,166 @@
 
-"use strict";
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("header");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-// ========================================
-// ELEMENTS
-// ========================================
+  const links = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("main section[id]");
+  const currentYear = document.getElementById("currentYear");
 
-const header = document.getElementById("header");
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const navItems = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("main section[id]");
-const progressBar = document.getElementById("scrollProgress");
-const revealElements = document.querySelectorAll(".reveal");
-const currentYear = document.getElementById("currentYear");
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-const timeline = document.getElementById("educationTimeline");
-const timelineProgress = document.getElementById("timelineProgress");
-const timelineItems = document.querySelectorAll(".timeline-item");
-
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-);
-
-// ========================================
-// CURRENT YEAR
-// ========================================
-
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}
-
-// ========================================
-// MOBILE NAVBAR
-// ========================================
-
-function closeMenu() {
-  if (!menuToggle || !navLinks) return;
-
-  menuToggle.classList.remove("active");
-  navLinks.classList.remove("show");
-
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute(
-    "aria-label",
-    "Open navigation menu"
-  );
-
-  document.body.classList.remove("menu-open");
-}
-
-function openMenu() {
-  if (!menuToggle || !navLinks) return;
-
-  menuToggle.classList.add("active");
-  navLinks.classList.add("show");
-
-  menuToggle.setAttribute("aria-expanded", "true");
-  menuToggle.setAttribute(
-    "aria-label",
-    "Close navigation menu"
-  );
-
-  document.body.classList.add("menu-open");
-}
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.contains("show");
-
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-}
-
-// Close mobile menu when a link is clicked
-navItems.forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener("click", (event) => {
-  if (!header || !navLinks) return;
-
-  if (
-    navLinks.classList.contains("show") &&
-    !header.contains(event.target)
-  ) {
-    closeMenu();
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
   }
-});
 
-// Escape key
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
-});
+  // MOBILE NAVIGATION
 
-// Desktop resize
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 900) {
-    closeMenu();
-  }
-});
+  function closeMenu() {
+    navLinks.classList.remove("show");
+    menuToggle.classList.remove("active");
 
-// ========================================
-// NAVBAR SCROLL EFFECT
-// ========================================
-
-function updateNavbar() {
-  if (!header) return;
-
-  header.classList.toggle(
-    "scrolled",
-    window.scrollY > 30
-  );
-}
-
-// ========================================
-// SCROLL PROGRESS
-// ========================================
-
-function updateScrollProgress() {
-  if (!progressBar) return;
-
-  const scrollHeight =
-    document.documentElement.scrollHeight -
-    window.innerHeight;
-
-  const progress =
-    scrollHeight > 0
-      ? (window.scrollY / scrollHeight) * 100
-      : 0;
-
-  progressBar.style.width =
-    Math.max(0, Math.min(100, progress)) + "%";
-}
-
-// ========================================
-// ACTIVE NAVIGATION
-// ========================================
-
-function updateActiveLink() {
-  let currentSection = "Home";
-
-  const scrollPosition =
-    window.scrollY + window.innerHeight * 0.35;
-
-  sections.forEach((section) => {
-    if (scrollPosition >= section.offsetTop) {
-      currentSection = section.id;
-    }
-  });
-
-  navItems.forEach((link) => {
-    const isActive =
-      link.getAttribute("href") === "#" + currentSection;
-
-    link.classList.toggle("active", isActive);
-
-    if (isActive) {
-      link.setAttribute("aria-current", "location");
-    } else {
-      link.removeAttribute("aria-current");
-    }
-  });
-}
-
-// ========================================
-// SMOOTH SCROLL
-// ========================================
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    const targetId = anchor.getAttribute("href");
-
-    if (!targetId || targetId === "#") return;
-
-    const target = document.getElementById(
-      targetId.substring(1)
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
     );
 
-    if (!target) return;
+    document.body.classList.remove("menu-open");
+  }
 
-    event.preventDefault();
-    closeMenu();
+  function toggleMenu() {
+    const isOpen = navLinks.classList.toggle("show");
 
-    target.scrollIntoView({
-      behavior: prefersReducedMotion.matches
-        ? "instant"
-        : "smooth",
-      block: "start"
-    });
+    menuToggle.classList.toggle("active", isOpen);
 
-    if (window.location.hash !== targetId) {
-      history.pushState(null, "", targetId);
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+
+    document.body.classList.toggle("menu-open", isOpen);
+  }
+
+  menuToggle.addEventListener("click", toggleMenu);
+
+  links.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
     }
   });
-});
 
-// ========================================
-// SCROLL REVEAL ANIMATION
-// ========================================
+  document.addEventListener("click", (event) => {
+    if (
+      navLinks.classList.contains("show") &&
+      !navLinks.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
 
-if (
-  "IntersectionObserver" in window &&
-  !prefersReducedMotion.matches
-) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 850) {
+      closeMenu();
+    }
+  });
+
+  // HEADER SCROLL EFFECT
+
+  function updateHeader() {
+    header.classList.toggle(
+      "scrolled",
+      window.scrollY > 20
+    );
+  }
+
+  // ACTIVE NAVIGATION SECTION
+  // Includes Contact section at bottom of page.
+
+  function updateActiveLink() {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const documentHeight =
+      document.documentElement.scrollHeight;
+
+    const atBottom =
+      scrollY + viewportHeight >= documentHeight - 5;
+
+    let activeSection = "Home";
+
+    if (atBottom) {
+      activeSection = "Contact";
+    } else {
+      const activationPoint = Math.min(
+        viewportHeight * 0.35,
+        250
+      );
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= activationPoint) {
+          activeSection = section.id;
         }
       });
-    },
-    {
-      threshold: 0.08,
-      rootMargin: "0px 0px -30px 0px"
+
+      const contact = document.getElementById("Contact");
+
+      if (contact) {
+        const rect = contact.getBoundingClientRect();
+
+        const visibleHeight = Math.max(
+          0,
+          Math.min(rect.bottom, viewportHeight) -
+          Math.max(rect.top, 0)
+        );
+
+        if (
+          visibleHeight > viewportHeight * 0.45 &&
+          rect.top < viewportHeight * 0.6
+        ) {
+          activeSection = "Contact";
+        }
+      }
     }
-  );
 
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
+    links.forEach((link) => {
+      const isActive =
+        link.getAttribute("href") === `#${activeSection}`;
 
-} else {
-  revealElements.forEach((element) => {
-    element.classList.add("visible");
-  });
-}
+      link.classList.toggle("active", isActive);
 
-// ========================================
-// EDUCATION ROADMAP REVEAL
-// ========================================
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
 
-if (timelineItems.length) {
+  // SCROLL REVEAL ANIMATIONS
+
+  const revealElements = document.querySelectorAll(".reveal");
+
   if (
-    "IntersectionObserver" in window &&
-    !prefersReducedMotion.matches
+    !reducedMotion &&
+    "IntersectionObserver" in window
   ) {
-    const educationObserver = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -254,85 +170,109 @@ if (timelineItems.length) {
         });
       },
       {
-        threshold: 0.15
+        threshold: 0.08,
+        rootMargin: "0px 0px -25px 0px"
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach((element) => {
+      element.classList.add("visible");
+    });
+  }
+
+  // EDUCATION TIMELINE
+
+  const timeline = document.getElementById(
+    "educationTimeline"
+  );
+
+  const timelineProgress = document.getElementById(
+    "timelineProgress"
+  );
+
+  const timelineItems = document.querySelectorAll(
+    ".timeline-item"
+  );
+
+  if (
+    !reducedMotion &&
+    "IntersectionObserver" in window
+  ) {
+    const timelineObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1
       }
     );
 
     timelineItems.forEach((item) => {
-      educationObserver.observe(item);
+      timelineObserver.observe(item);
     });
-
   } else {
     timelineItems.forEach((item) => {
       item.classList.add("visible");
     });
   }
-}
 
-// ========================================
-// EDUCATION ROADMAP PROGRESS LINE
-// ========================================
+  function updateTimelineProgress() {
+    if (!timeline || !timelineProgress) return;
 
-function updateEducationProgress() {
-  if (!timeline || !timelineProgress) return;
+    if (reducedMotion) {
+      timelineProgress.style.height = "100%";
+      return;
+    }
 
-  const rect = timeline.getBoundingClientRect();
-  const timelineHeight = rect.height;
+    const rect = timeline.getBoundingClientRect();
 
-  const scrollPoint = window.innerHeight * 0.65;
+    const progress =
+      (window.innerHeight * 0.65 - rect.top) /
+      rect.height;
 
-  const progress = Math.max(
-    0,
-    Math.min(
-      timelineHeight,
-      scrollPoint - rect.top
-    )
+    const percentage = Math.min(
+      100,
+      Math.max(0, progress * 100)
+    );
+
+    timelineProgress.style.height = `${percentage}%`;
+  }
+
+  // OPTIMIZED SCROLL HANDLER
+
+  let ticking = false;
+
+  function updateOnScroll() {
+    updateHeader();
+    updateActiveLink();
+    updateTimelineProgress();
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateOnScroll);
+      }
+    },
+    { passive: true }
   );
 
-  timelineProgress.style.height = progress + "px";
-}
+  window.addEventListener("resize", updateOnScroll);
 
-// ========================================
-// ALL SCROLL EFFECTS
-// ========================================
+  // INITIAL STATE
 
-let scrollScheduled = false;
-
-function handleScroll() {
-  if (scrollScheduled) return;
-
-  scrollScheduled = true;
-
-  requestAnimationFrame(() => {
-    updateNavbar();
-    updateScrollProgress();
-    updateActiveLink();
-    updateEducationProgress();
-
-    scrollScheduled = false;
-  });
-}
-
-window.addEventListener("scroll", handleScroll, {
-  passive: true
-});
-
-// ========================================
-// INITIALIZE
-// ========================================
-
-function initializePortfolio() {
-  updateNavbar();
-  updateScrollProgress();
-  updateActiveLink();
-  updateEducationProgress();
-}
-
-initializePortfolio();
-
-window.addEventListener("load", initializePortfolio);
-
-window.addEventListener("resize", () => {
-  updateEducationProgress();
-  updateActiveLink();
+  updateOnScroll();
+  window.addEventListener("load", updateOnScroll);
 });

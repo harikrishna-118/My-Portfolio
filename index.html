@@ -4,34 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f5f7">
+  <meta name="description" content="Hari Krishna Prasad - Frontend Developer Portfolio">
 
-  <meta name="description" content="HariKrishna Prasad - Frontend Developer Portfolio">
-
-  <title>HariKrishna Prasad | Frontend Developer</title>
+  <title>Hari Krishna Prasad | Frontend Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
   <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Header -->
+  <!-- NAVBAR -->
   <header class="header" id="header">
-
-    <nav class="navbar container">
+    <nav class="navbar container" aria-label="Main navigation">
 
       <a href="#Home" class="logo">
-        <span class="logo-icon">H.</span>
-        <span class="logo-text">Hari<span class="accent">Krishna</span></span>
+        Hari Krishna Prasad
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -47,8 +40,8 @@
         id="menuToggle"
         type="button"
         aria-label="Open navigation menu"
-        aria-controls="navLinks"
         aria-expanded="false"
+        aria-controls="navLinks"
       >
         <span></span>
         <span></span>
@@ -56,35 +49,31 @@
       </button>
 
     </nav>
-
   </header>
 
   <main>
 
-    <!-- Home Section -->
+    <!-- HOME -->
     <section class="hero section" id="Home">
-
-      <div class="hero-glow"></div>
-
       <div class="container hero-container">
 
         <div class="hero-content reveal">
 
           <div class="availability">
-            <span class="availability-dot"></span>
             Open to Opportunities
           </div>
 
           <p class="hero-greeting">HELLO, I'M</p>
 
           <h1 class="hero-title">
-            HariKrishna
-            <span>Prasad.</span>
+            <span class="hero-name">Hari Krishna</span>
+            <span class="hero-surname">Prasad.</span>
           </h1>
 
           <div class="hero-role">
-            <span class="role-line"></span>
-            <h2>Frontend Developer</h2>
+            <h2>
+              <span>Frontend</span> Developer
+            </h2>
           </div>
 
           <p class="hero-description">
@@ -95,31 +84,26 @@
           </p>
 
           <div class="hero-buttons">
-
             <a href="#Projects" class="primary-btn">
               Explore My Work
-              <span aria-hidden="true">↗</span>
             </a>
 
             <a href="#Contact" class="secondary-btn">
               Contact Me
             </a>
-
           </div>
 
           <div class="hero-social">
-
             <span>FIND ME ON</span>
 
             <div class="social-links">
-
               <a
                 href="https://www.linkedin.com/in/vankayalapati-harikrishna-prasad-5b3819313"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <img src="images/icons8-linkedin-48.png" alt="LinkedIn">
+                <img src="images/icons8-linkedin-48.png" alt="">
               </a>
 
               <a
@@ -128,244 +112,199 @@
                 rel="noopener noreferrer"
                 aria-label="GitHub"
               >
-                <img src="images/github.png" alt="GitHub">
+                <img src="images/github.png" alt="">
               </a>
-
             </div>
-
           </div>
 
         </div>
 
         <div class="hero-visual reveal">
-
-          <div class="profile-decoration decoration-one"></div>
-          <div class="profile-decoration decoration-two"></div>
-
           <div class="profile-wrapper">
-
-            <div class="profile-ring">
-
-              <img
-                src="images/profile.png.jpg"
-                alt="HariKrishna Prasad"
-                class="profile-image"
-              >
-
-            </div>
-
+            <img
+              src="images/profile.png.jpg"
+              alt="Hari Krishna Prasad"
+              class="profile-image"
+            >
           </div>
-
-          <div class="floating-card floating-card-one">
-            <span class="floating-icon">✦</span>
-            <div>
-              <strong>Frontend</strong>
-              <small>Development</small>
-            </div>
-          </div>
-
-          <div class="floating-card floating-card-two">
-            <span class="floating-icon">⚡</span>
-            <div>
-              <strong>React.js</strong>
-              <small>Web Applications</small>
-            </div>
-          </div>
-
         </div>
 
       </div>
-
-      <a href="#Education" class="scroll-indicator">
-        <span>SCROLL TO EXPLORE</span>
-        <span class="scroll-arrow">↓</span>
-      </a>
-
     </section>
 
-   
-<!-- EDUCATION SECTION -->
-<section class="education-section section" id="Education">
-  <div class="container">
+    <!-- EDUCATION -->
+    <section class="education-section section" id="Education">
+      <div class="container">
 
-    <div class="section-heading reveal">
-      <span class="section-tag">01 / EDUCATION</span>
-      <h2>My <span>Education</span></h2>
-      <p>My academic journey from school to postgraduate studies.</p>
-    </div>
+        <div class="section-heading reveal">
+          <span class="section-tag">01 / EDUCATION</span>
+          <h2>My <span>Education</span></h2>
+          <p>My academic journey from school to postgraduate studies.</p>
+        </div>
 
-    <div class="education-timeline" id="educationTimeline">
+        <div class="education-timeline" id="educationTimeline">
+          <div class="timeline-progress" id="timelineProgress"></div>
 
-      <div class="timeline-progress" id="timelineProgress"></div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2018 - 2019</span>
+              <span class="timeline-label">SECONDARY EDUCATION</span>
+              <h3>Secondary Education (10th)</h3>
+              <p>Z.P. High School, Vinukonda</p>
+              <span class="timeline-number">01</span>
+            </div>
+          </div>
 
-      <!-- 10th -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2019 - 2021</span>
+              <span class="timeline-label">HIGHER SECONDARY</span>
+              <h3>Intermediate</h3>
+              <p>N.R.I Junior College, Vijayawada</p>
+              <span class="timeline-number">02</span>
+            </div>
+          </div>
 
-        <div class="timeline-card">
-          <span class="timeline-year">2018 — 2019</span>
-          <span class="timeline-label">SECONDARY EDUCATION</span>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2021 - 2024</span>
+              <span class="timeline-label">BACHELOR'S DEGREE</span>
+              <h3>B.Sc. Data Science</h3>
+              <p>Jagarlamudi Kuppuswamy Choudary College, Guntur</p>
+              <span class="timeline-number">03</span>
+            </div>
+          </div>
 
-          <h3>Secondary Education (10th)</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2024 - 2026</span>
+              <span class="timeline-label">MASTER'S DEGREE</span>
+              <h3>Master of Computer Applications (MCA)</h3>
+              <p>R.V. Institute of Technology, Chebrolu</p>
+              <span class="timeline-number">04</span>
+            </div>
+          </div>
 
-          <p>Z.P. High School, Vinukonda</p>
-
-          <span class="timeline-number">01</span>
         </div>
       </div>
+    </section>
 
-      <!-- Intermediate -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-card">
-          <span class="timeline-year">2019 — 2021</span>
-          <span class="timeline-label">HIGHER SECONDARY</span>
-
-          <h3>Intermediate</h3>
-
-          <p>N.R.I Junior College, Vijayawada</p>
-
-          <span class="timeline-number">02</span>
-        </div>
-      </div>
-
-      <!-- Degree -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-card">
-          <span class="timeline-year">2021 — 2024</span>
-          <span class="timeline-label">BACHELOR'S DEGREE</span>
-
-          <h3>B.Sc. Data Science</h3>
-
-          <p>
-            Jagarlamudi Kuppuswamy Choudary College,
-            Guntur
-          </p>
-
-          <span class="timeline-number">03</span>
-        </div>
-      </div>
-
-      <!-- MCA -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-card">
-          <span class="timeline-year">2024 — 2026</span>
-          <span class="timeline-label">MASTER'S DEGREE</span>
-
-          <h3>Master of Computer Applications (MCA)</h3>
-
-          <p>
-            R.V. Institute of Technology, Chebrolu
-          </p>
-
-          <span class="timeline-number">04</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section class="skills-section section" id="Skills">
-
       <div class="container">
 
         <div class="section-heading reveal">
           <span class="section-tag">02 / TECHNICAL SKILLS</span>
           <h2>My <span>Expertise</span></h2>
-          <p>Technologies and tools I use to build web experiences.</p>
+          <p>Technologies and tools I use to build modern web applications.</p>
         </div>
 
         <div class="skills-grid">
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-html reveal">
             <div class="skill-icon">
-              <img src="images/html.png" alt="HTML">
+              <img src="images/html.png" alt="HTML5" loading="lazy">
             </div>
             <h3>HTML5</h3>
-            <p>Structure & Semantics</p>
-          </div>
+            <span class="skill-category">WEB STRUCTURE</span>
+            <p>
+              Building semantic, accessible, and well-structured
+              web pages using modern HTML elements and best practices.
+            </p>
+          </article>
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-css reveal">
             <div class="skill-icon">
-              <img src="images/css.png" alt="CSS">
+              <img src="images/css.png" alt="CSS3" loading="lazy">
             </div>
             <h3>CSS3</h3>
-            <p>Styling & Responsive Design</p>
-          </div>
+            <span class="skill-category">DESIGN & RESPONSIVENESS</span>
+            <p>
+              Creating modern layouts with Flexbox, CSS Grid,
+              responsive media queries, animations, and transitions.
+            </p>
+          </article>
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-js reveal">
             <div class="skill-icon">
-              <img src="images/java-script.png" alt="JavaScript">
+              <img src="images/java-script.png" alt="JavaScript" loading="lazy">
             </div>
             <h3>JavaScript</h3>
-            <p>Interactive Web Development</p>
-          </div>
+            <span class="skill-category">INTERACTIVITY</span>
+            <p>
+              Developing interactive interfaces using DOM manipulation,
+              events, asynchronous JavaScript, and APIs.
+            </p>
+          </article>
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-react reveal">
             <div class="skill-icon">
-              <img src="images/react.png" alt="React">
+              <img src="images/react.png" alt="React.js" loading="lazy">
             </div>
             <h3>React.js</h3>
-            <p>Component-Based UI</p>
-          </div>
+            <span class="skill-category">FRONTEND DEVELOPMENT</span>
+            <p>
+              Building reusable components, managing state with
+              React Hooks, handling routing, and integrating REST APIs.
+            </p>
+          </article>
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-github reveal">
             <div class="skill-icon">
-              <img src="images/github.png" alt="GitHub">
+              <img src="images/github.png" alt="GitHub" loading="lazy">
             </div>
-            <h3>GitHub</h3>
-            <p>Version Control</p>
-          </div>
+            <h3>Git & GitHub</h3>
+            <span class="skill-category">VERSION CONTROL</span>
+            <p>
+              Managing source code, tracking changes, working with
+              repositories, and maintaining organized workflows.
+            </p>
+          </article>
 
-          <div class="skill-card reveal">
+          <article class="skill-card skill-python reveal">
             <div class="skill-icon">
-              <img src="images/python.png" alt="Python">
+              <img src="images/python.png" alt="Python" loading="lazy">
             </div>
             <h3>Python</h3>
-            <p>Programming Fundamentals</p>
-          </div>
+            <span class="skill-category">PROGRAMMING</span>
+            <p>
+              Understanding Python fundamentals, data structures,
+              functions, loops, and basic problem-solving techniques.
+            </p>
+          </article>
 
         </div>
-
       </div>
-
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section class="projects-section section" id="Projects">
-
       <div class="container">
 
         <div class="section-heading reveal">
           <span class="section-tag">03 / SELECTED WORK</span>
           <h2>Featured <span>Projects</span></h2>
-          <p>A collection of projects I've built using modern technologies.</p>
+          <p>A collection of projects I've built using frontend technologies.</p>
         </div>
 
         <div class="projects-grid">
 
-          <!-- Portfolio Project -->
+          <!-- PORTFOLIO -->
           <article class="project-card reveal">
-
             <div class="project-image">
               <img
                 src="images/portfolio.jpg.jpeg"
-                alt="Portfolio Website Screenshot"
+                alt="Portfolio website screenshot"
                 loading="lazy"
               >
               <span class="project-index">01</span>
             </div>
 
             <div class="project-content">
-
               <div class="project-tech">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -375,20 +314,18 @@
               <h3>Portfolio Website</h3>
 
               <p>
-                A responsive personal portfolio showcasing
-                my skills, education, and projects with a
-                clean and intuitive interface.
+                A responsive personal portfolio showcasing my skills,
+                education, and projects with a clean interface.
               </p>
 
               <div class="project-actions">
-
                 <a
                   href="https://hari-krishna-prasad-portfolio.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="project-live"
                 >
-                  Live Project ↗
+                  Live Project
                 </a>
 
                 <a
@@ -397,52 +334,47 @@
                   rel="noopener noreferrer"
                   class="project-github"
                 >
-                  GitHub ↗
+                  GitHub
                 </a>
-
               </div>
-
             </div>
-
           </article>
 
-          <!-- Weather App -->
+          <!-- WEATHER -->
           <article class="project-card reveal">
-
             <div class="project-image">
               <img
                 src="images/weatherapp.jpg.jpeg"
-                alt="Weather Application Screenshot"
+                alt="Weather application screenshot"
                 loading="lazy"
               >
               <span class="project-index">02</span>
             </div>
 
             <div class="project-content">
-
               <div class="project-tech">
-                <span>React.js</span>
-                <span>CSS</span>
-                <span>REST API</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Weather API</span>
               </div>
 
               <h3>Weather Application</h3>
 
               <p>
-                A weather application providing real-time
-                weather information and forecasts through
-                OpenWeather API integration.
+                A responsive weather application built with HTML,
+                CSS, JavaScript, and a weather API. It displays
+                current weather conditions and forecasts.
               </p>
 
               <div class="project-actions">
-
                 <a
                   href="https://weather-app2026.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="project-live"
                 >
-                  Live Project ↗
+                  Live Project
                 </a>
 
                 <a
@@ -451,29 +383,24 @@
                   rel="noopener noreferrer"
                   class="project-github"
                 >
-                  GitHub ↗
+                  GitHub
                 </a>
-
               </div>
-
             </div>
-
           </article>
 
-          <!-- E-Commerce -->
+          <!-- E-COMMERCE -->
           <article class="project-card reveal">
-
             <div class="project-image">
               <img
                 src="images/e-commerce.jpg.jpeg"
-                alt="E-Commerce Website Screenshot"
+                alt="E-commerce website screenshot"
                 loading="lazy"
               >
               <span class="project-index">03</span>
             </div>
 
             <div class="project-content">
-
               <div class="project-tech">
                 <span>React.js</span>
                 <span>CSS</span>
@@ -483,20 +410,18 @@
               <h3>E-Commerce Website</h3>
 
               <p>
-                A responsive shopping application with
-                product listings, category filtering,
-                product details, and shopping cart features.
+                A responsive shopping application with product listings,
+                category filtering, product details, and shopping cart features.
               </p>
 
               <div class="project-actions">
-
                 <a
                   href="https://go-buy.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="project-live"
                 >
-                  Live Project ↗
+                  Live Project
                 </a>
 
                 <a
@@ -505,30 +430,23 @@
                   rel="noopener noreferrer"
                   class="project-github"
                 >
-                  GitHub ↗
+                  GitHub
                 </a>
-
               </div>
-
             </div>
-
           </article>
 
         </div>
-
       </div>
-
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section class="contact-section section" id="Contact">
-
       <div class="container">
 
         <div class="contact-wrapper reveal">
 
           <div class="contact-content">
-
             <span class="section-tag">04 / GET IN TOUCH</span>
 
             <h2>
@@ -546,9 +464,8 @@
               href="mailto:harikrishnaprasad118@gmail.com"
               class="primary-btn"
             >
-              Say Hello ↗
+              Say Hello
             </a>
-
           </div>
 
           <div class="contact-links">
@@ -565,8 +482,6 @@
                 <span>EMAIL</span>
                 <h3>Gmail</h3>
               </div>
-
-              <span class="contact-arrow">↗</span>
             </a>
 
             <a
@@ -583,8 +498,6 @@
                 <span>PROFESSIONAL NETWORK</span>
                 <h3>LinkedIn</h3>
               </div>
-
-              <span class="contact-arrow">↗</span>
             </a>
 
             <a
@@ -601,37 +514,34 @@
                 <span>DIRECT MESSAGE</span>
                 <h3>Telegram</h3>
               </div>
-
-              <span class="contact-arrow">↗</span>
             </a>
 
           </div>
 
         </div>
-
       </div>
-
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
-
     <div class="container footer-content">
 
       <a href="#Home" class="footer-logo">
-        Hari<span>Krishna.</span>
+        Hari Krishna Prasad
       </a>
 
-      <p>© <span id="currentYear"></span> HariKrishna Prasad. All rights reserved.</p>
+      <p>
+        © <span id="currentYear"></span>
+        Hari Krishna Prasad. All rights reserved.
+      </p>
 
       <a href="#Home" class="back-to-top">
-        Back to Top ↑
+        Back to Top
       </a>
 
     </div>
-
   </footer>
 
 </body>

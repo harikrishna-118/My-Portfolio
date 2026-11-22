@@ -1,6 +1,6 @@
 
 /* =========================================
-   GLOBAL
+   01. GLOBAL STYLES
 ========================================= */
 
 :root {
@@ -16,7 +16,7 @@
   --orange: #ea782d;
   --green: #22c55e;
   --radius: 14px;
-  --shadow: 0 12px 35px rgba(22, 39, 62, .08);
+  --shadow: 0 12px 35px rgba(22, 39, 62, 0.08);
 }
 
 * {
@@ -89,7 +89,7 @@ h3 {
 }
 
 /* =========================================
-   NAVBAR
+   02. NAVBAR
 ========================================= */
 
 .header {
@@ -98,13 +98,13 @@ h3 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, .97);
+  background: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid var(--border);
-  transition: box-shadow .25s ease;
+  transition: box-shadow 0.25s ease;
 }
 
 .header.scrolled {
-  box-shadow: 0 8px 30px rgba(22, 39, 62, .07);
+  box-shadow: 0 8px 30px rgba(22, 39, 62, 0.07);
 }
 
 .navbar {
@@ -121,7 +121,7 @@ h3 {
   font-family: "Manrope", sans-serif;
   font-size: 19px;
   font-weight: 800;
-  letter-spacing: -.7px;
+  letter-spacing: -0.7px;
   white-space: nowrap;
 }
 
@@ -138,7 +138,7 @@ h3 {
   color: #536176;
   font-size: 13px;
   font-weight: 600;
-  transition: color .25s ease;
+  transition: color 0.25s ease;
 }
 
 .nav-link:hover,
@@ -156,13 +156,15 @@ h3 {
   background: var(--primary);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
   transform: scaleX(1);
 }
+
+/* Hamburger */
 
 .menu-toggle {
   display: none;
@@ -182,7 +184,7 @@ h3 {
   height: 2px;
   border-radius: 2px;
   background: var(--primary);
-  transition: transform .25s, opacity .25s;
+  transition: transform 0.25s, opacity 0.25s;
 }
 
 .menu-toggle.active span:first-child {
@@ -198,7 +200,7 @@ h3 {
 }
 
 /* =========================================
-   HOME
+   03. HOME / HERO SECTION
 ========================================= */
 
 .hero {
@@ -211,7 +213,7 @@ h3 {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 65px;
 }
@@ -220,7 +222,7 @@ h3 {
   min-width: 0;
 }
 
-/* AVAILABILITY */
+/* Availability Label */
 
 .availability {
   display: inline-flex;
@@ -243,22 +245,22 @@ h3 {
   height: 8px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, .12);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
 }
 
 .availability-dot::after {
   content: "";
   position: absolute;
   inset: -4px;
-  border: 1px solid rgba(34, 197, 94, .5);
+  border: 1px solid rgba(34, 197, 94, 0.5);
   border-radius: 50%;
   animation: availabilityPulse 2s ease-out infinite;
 }
 
 @keyframes availabilityPulse {
   0% {
-    transform: scale(.65);
-    opacity: .85;
+    transform: scale(0.65);
+    opacity: 0.85;
   }
 
   70%,
@@ -268,7 +270,7 @@ h3 {
   }
 }
 
-/* GREETING */
+/* Greeting */
 
 .hero-greeting {
   margin-bottom: 12px;
@@ -278,7 +280,7 @@ h3 {
   letter-spacing: 1.6px;
 }
 
-/* NAME */
+/* Name */
 
 .hero-title {
   font-size: clamp(38px, 4.5vw, 58px);
@@ -308,12 +310,12 @@ h3 {
   transform: translateY(10px);
   text-shadow: none;
   filter: none;
-  animation: cleanLetterReveal .4s ease forwards;
+  animation: cleanLetterReveal 0.4s ease forwards;
   animation-delay: var(--letter-delay, 0ms);
 }
 
 .name-letter.space {
-  width: .25em;
+  width: 0.25em;
 }
 
 @keyframes cleanLetterReveal {
@@ -328,7 +330,7 @@ h3 {
   }
 }
 
-/* ROLE PUZZLE */
+/* Frontend Developer Puzzle */
 
 .hero-role {
   margin: 21px 0;
@@ -343,7 +345,7 @@ h3 {
 .puzzle-role {
   display: flex;
   flex-wrap: wrap;
-  gap: .35em;
+  gap: 0.35em;
 }
 
 .role-orange {
@@ -360,12 +362,12 @@ h3 {
 }
 
 .puzzle-role.is-animating span {
-  animation: puzzleFlicker .18s ease-in-out infinite alternate;
+  animation: puzzleFlicker 0.18s ease-in-out infinite alternate;
 }
 
 @keyframes puzzleFlicker {
   from {
-    opacity: .75;
+    opacity: 0.75;
   }
 
   to {
@@ -373,7 +375,7 @@ h3 {
   }
 }
 
-/* TYPING PARAGRAPH */
+/* Paragraph Typing */
 
 .hero-description {
   max-width: 530px;
@@ -394,8 +396,8 @@ h3 {
   height: 1em;
   margin-left: 3px;
   background: var(--orange);
-  vertical-align: -.12em;
-  animation: typingCursor .7s step-end infinite;
+  vertical-align: -0.12em;
+  animation: typingCursor 0.7s step-end infinite;
 }
 
 @keyframes typingCursor {
@@ -410,7 +412,7 @@ h3 {
   }
 }
 
-/* BUTTONS */
+/* Hero Buttons */
 
 .hero-buttons {
   display: flex;
@@ -431,11 +433,11 @@ h3 {
   font-size: 13px;
   font-weight: 700;
   transition:
-    transform .25s ease,
-    background .25s ease,
-    color .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .primary-btn,
@@ -450,7 +452,7 @@ h3 {
   background: var(--primary-hover);
   border-color: var(--primary-hover);
   transform: translateY(-3px);
-  box-shadow: 0 9px 22px rgba(32, 55, 84, .18);
+  box-shadow: 0 9px 22px rgba(32, 55, 84, 0.18);
 }
 
 .secondary-btn,
@@ -473,7 +475,7 @@ h3 {
   transform: translateY(0);
 }
 
-/* SOCIAL */
+/* Hero Social Links */
 
 .hero-social {
   display: flex;
@@ -502,7 +504,7 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 9px;
   background: white;
-  transition: transform .25s, border-color .25s;
+  transition: transform 0.25s, border-color 0.25s;
 }
 
 .social-links a:hover {
@@ -516,7 +518,7 @@ h3 {
   object-fit: contain;
 }
 
-/* PROFILE - NO PARTICLES */
+/* Profile Image */
 
 .hero-visual {
   width: 100%;
@@ -533,7 +535,7 @@ h3 {
   background: var(--surface-2);
   box-shadow:
     0 0 0 1px var(--border),
-    0 18px 45px rgba(32, 55, 84, .10);
+    0 18px 45px rgba(32, 55, 84, 0.10);
 }
 
 .profile-image {
@@ -544,7 +546,7 @@ h3 {
 }
 
 /* =========================================
-   SECTION HEADINGS
+   04. SECTION HEADINGS
 ========================================= */
 
 .section-heading {
@@ -579,7 +581,7 @@ h3 {
 }
 
 /* =========================================
-   EDUCATION
+   05. EDUCATION SECTION
 ========================================= */
 
 .education-section {
@@ -624,7 +626,7 @@ h3 {
   margin-bottom: 45px;
   opacity: 0;
   transform: translateY(25px);
-  transition: opacity .6s, transform .6s;
+  transition: opacity 0.6s, transform 0.6s;
 }
 
 .timeline-item.visible {
@@ -671,17 +673,17 @@ h3 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition:
-    background .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease,
-    transform .35s ease;
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
 }
 
 .timeline-card:hover {
   background: #dce6f2;
   border-color: #8ca6c4;
   transform: translateY(-5px);
-  box-shadow: 0 15px 32px rgba(32, 55, 84, .12);
+  box-shadow: 0 15px 32px rgba(32, 55, 84, 0.12);
 }
 
 .timeline-item:nth-child(3) .timeline-card:hover {
@@ -739,7 +741,7 @@ h3 {
 .timeline-year,
 .timeline-label,
 .timeline-number {
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
 
 .timeline-card:hover h3 {
@@ -756,11 +758,11 @@ h3 {
 }
 
 .timeline-card:hover .timeline-number {
-  color: rgba(37, 79, 123, .17);
+  color: rgba(37, 79, 123, 0.17);
 }
 
 /* =========================================
-   SKILLS
+   06. SKILLS SECTION
 ========================================= */
 
 .skills-section {
@@ -776,7 +778,7 @@ h3 {
 .skill-card {
   --skill-color: #203754;
   --skill-bg: #203754;
-  --skill-text: #ffffff;
+
   position: relative;
   isolation: isolate;
   min-width: 0;
@@ -787,46 +789,44 @@ h3 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition:
-    transform .35s ease,
-    border-color .35s ease,
-    box-shadow .35s ease;
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+/* Individual Skill Colors */
 
 .skill-html {
   --skill-color: #e44d26;
   --skill-bg: #e44d26;
-  --skill-text: #ffffff;
 }
 
 .skill-css {
   --skill-color: #1572b6;
   --skill-bg: #1572b6;
-  --skill-text: #ffffff;
 }
 
 .skill-js {
   --skill-color: #f7df1e;
-  --skill-bg: #f7df1e;
-  --skill-text: #202020;
+  --skill-bg: #a77c00;
 }
 
 .skill-react {
-  --skill-color: #087ea4;
-  --skill-bg: #087ea4;
-  --skill-text: #ffffff;
+  --skill-color: #65d0f4;
+  --skill-bg: #6acdee;
 }
 
 .skill-github {
   --skill-color: #24292f;
   --skill-bg: #24292f;
-  --skill-text: #ffffff;
 }
 
 .skill-python {
   --skill-color: #3776ab;
   --skill-bg: #3776ab;
-  --skill-text: #ffffff;
 }
+
+/* Background Hover Animation */
 
 .skill-card::before {
   content: "";
@@ -834,7 +834,7 @@ h3 {
   inset: 0;
   background: var(--skill-bg);
   transform: translateY(101%);
-  transition: transform .45s cubic-bezier(.2, .75, .25, 1);
+  transition: transform 0.45s cubic-bezier(0.2, 0.75, 0.25, 1);
   z-index: -1;
 }
 
@@ -848,13 +848,13 @@ h3 {
   background: var(--skill-color);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-8px);
   border-color: var(--skill-color);
-  box-shadow: 0 16px 35px rgba(30, 45, 65, .15);
+  box-shadow: 0 16px 35px rgba(30, 45, 65, 0.15);
 }
 
 .skill-card:hover::before {
@@ -865,6 +865,8 @@ h3 {
   transform: scaleX(1);
 }
 
+/* Skill Icons */
+
 .skill-icon {
   width: 58px;
   height: 58px;
@@ -874,24 +876,26 @@ h3 {
   background: #edf1f5;
   border: 1px solid var(--border);
   border-radius: 11px;
-  transition: background .35s, transform .35s;
+  transition: background 0.35s, transform 0.35s;
 }
 
 .skill-icon img {
   width: 35px;
   height: 35px;
   object-fit: contain;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
 .skill-card:hover .skill-icon {
-  background: rgba(255, 255, 255, .95);
+  background: rgba(255, 255, 255, 0.95);
   transform: translateY(-3px) rotate(-4deg);
 }
 
 .skill-card:hover .skill-icon img {
   transform: scale(1.17) rotate(4deg);
 }
+
+/* Skill Text */
 
 .skill-card h3 {
   margin-bottom: 5px;
@@ -905,7 +909,7 @@ h3 {
   color: #71829a;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
 }
 
 .skill-card p {
@@ -918,30 +922,34 @@ h3 {
 .skill-card p,
 .skill-category {
   transition:
-    color .35s ease,
-    transform .35s ease,
-    letter-spacing .35s ease;
+    color 0.35s ease,
+    transform 0.35s ease,
+    letter-spacing 0.35s ease;
+}
+
+/* ALL SKILL TEXT WHITE ON HOVER */
+
+.skill-card:hover h3,
+.skill-card:hover .skill-category,
+.skill-card:hover p {
+  color: #ffffff;
 }
 
 .skill-card:hover h3 {
-  color: var(--skill-text);
-  letter-spacing: .35px;
+  letter-spacing: 0.35px;
   transform: translateX(3px);
 }
 
 .skill-card:hover .skill-category {
-  color: var(--skill-text);
-  opacity: .85;
   letter-spacing: 1px;
 }
 
 .skill-card:hover p {
-  color: var(--skill-text);
   transform: translateY(-2px);
 }
 
 /* =========================================
-   PROJECTS
+   07. PROJECTS SECTION
 ========================================= */
 
 .projects-section {
@@ -962,7 +970,7 @@ h3 {
   background: white;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: transform .3s, box-shadow .3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
@@ -982,7 +990,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image img {
@@ -1025,11 +1033,11 @@ h3 {
   font-weight: 600;
   cursor: default;
   transition:
-    background .25s ease,
-    color .25s ease,
-    border-color .25s ease,
-    transform .25s ease,
-    box-shadow .25s ease;
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .project-tech span:hover {
@@ -1037,7 +1045,7 @@ h3 {
   color: white;
   border-color: var(--primary);
   transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(32, 55, 84, .15);
+  box-shadow: 0 5px 12px rgba(32, 55, 84, 0.15);
 }
 
 .project-content h3 {
@@ -1067,7 +1075,7 @@ h3 {
 }
 
 /* =========================================
-   CONTACT
+   08. CONTACT SECTION
 ========================================= */
 
 .contact-section {
@@ -1117,10 +1125,10 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 11px;
   transition:
-    background .35s ease,
-    border-color .35s ease,
-    transform .35s ease,
-    box-shadow .35s ease;
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .contact-item::before {
@@ -1129,7 +1137,7 @@ h3 {
   inset: 0;
   background: var(--primary);
   transform: translateX(-101%);
-  transition: transform .4s ease;
+  transition: transform 0.4s ease;
   z-index: -1;
 }
 
@@ -1141,7 +1149,7 @@ h3 {
   background: var(--primary);
   border-color: var(--primary);
   transform: translateX(6px);
-  box-shadow: 0 12px 26px rgba(32, 55, 84, .15);
+  box-shadow: 0 12px 26px rgba(32, 55, 84, 0.15);
 }
 
 .contact-icon {
@@ -1152,7 +1160,7 @@ h3 {
   place-items: center;
   background: #edf1f5;
   border-radius: 9px;
-  transition: background .35s, transform .35s;
+  transition: background 0.35s, transform 0.35s;
 }
 
 .contact-icon img {
@@ -1170,7 +1178,7 @@ h3 {
   color: var(--muted);
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
 }
 
 .contact-info h3 {
@@ -1181,7 +1189,7 @@ h3 {
 
 .contact-info h3,
 .contact-info span {
-  transition: color .3s ease;
+  transition: color 0.3s ease;
 }
 
 .contact-item:hover .contact-info h3 {
@@ -1193,7 +1201,7 @@ h3 {
 }
 
 /* =========================================
-   FOOTER
+   09. FOOTER
 ========================================= */
 
 .footer {
@@ -1229,13 +1237,13 @@ h3 {
 }
 
 /* =========================================
-   SCROLL REVEAL
+   10. SCROLL REVEAL
 ========================================= */
 
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.visible {
@@ -1244,7 +1252,7 @@ h3 {
 }
 
 /* =========================================
-   TABLET
+   11. LAPTOP / SMALL DESKTOP
 ========================================= */
 
 @media (max-width: 1050px) {
@@ -1274,7 +1282,7 @@ h3 {
 }
 
 /* =========================================
-   MOBILE NAVBAR
+   12. TABLET RESPONSIVE
 ========================================= */
 
 @media (max-width: 850px) {
@@ -1298,14 +1306,14 @@ h3 {
     padding: 15px 5% 20px;
     background: white;
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 12px 25px rgba(22, 39, 62, .06);
+    box-shadow: 0 12px 25px rgba(22, 39, 62, 0.06);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition:
-      opacity .25s,
-      transform .25s,
-      visibility .25s;
+      opacity 0.25s,
+      transform 0.25s,
+      visibility 0.25s;
   }
 
   .nav-links.show {
@@ -1372,7 +1380,7 @@ h3 {
 }
 
 /* =========================================
-   MOBILE EDUCATION
+   13. MOBILE EDUCATION TIMELINE
 ========================================= */
 
 @media (max-width: 768px) {
@@ -1406,7 +1414,8 @@ h3 {
 }
 
 /* =========================================
-   SMALL MOBILE
+   14. MOBILE RESPONSIVE
+   HERO CONTENT GAPS REDUCED
 ========================================= */
 
 @media (max-width: 600px) {
@@ -1426,42 +1435,112 @@ h3 {
     font-size: 16px;
   }
 
+  /* Hero spacing */
+
   .hero {
-    padding-top: 115px;
-    padding-bottom: 65px;
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 45px;
   }
 
-  .availability {
-    font-size: 10px;
-    padding: 7px 12px;
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  /* Availability gap */
+
+  .availability {
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
+  /* Greeting gap */
+
+  .hero-greeting {
+    margin-bottom: 5px;
+  }
+
+  /* Name gap */
 
   .hero-title {
     font-size: clamp(33px, 8vw, 42px);
+    line-height: 1.1;
     letter-spacing: -1.3px;
   }
 
-  .hero-description {
-    font-size: 13px;
+  .animated-name {
+    min-height: 1.1em;
   }
 
-  .typing-description {
-    min-height: 10em;
+  /* Role gap */
+
+  .hero-role {
+    margin: 10px 0;
   }
 
   .hero-role h2 {
     font-size: 17px;
+    line-height: 1.3;
   }
 
-  .hero-visual {
-    max-width: 290px;
+  .puzzle-role {
+    justify-content: center;
+  }
+
+  /* Paragraph */
+
+  .hero-description {
+    max-width: 100%;
+    margin-inline: auto;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .typing-description {
+    min-height: 8.5em;
+  }
+
+  /* Buttons */
+
+  .hero-buttons {
+    justify-content: center;
+    margin-top: 17px;
+    gap: 10px;
   }
 
   .primary-btn,
   .secondary-btn {
+    min-height: 42px;
     padding: 11px 16px;
     font-size: 12px;
   }
+
+  /* Social links */
+
+  .hero-social {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .social-links {
+    gap: 9px;
+  }
+
+  /* Profile */
+
+  .hero-visual {
+    max-width: 260px;
+    justify-self: center;
+  }
+
+  /* Section headings */
 
   .section-heading {
     margin-bottom: 32px;
@@ -1474,6 +1553,8 @@ h3 {
   .section-heading p {
     font-size: 13px;
   }
+
+  /* Skills */
 
   .skills-grid {
     grid-template-columns: 1fr;
@@ -1489,6 +1570,8 @@ h3 {
     font-size: 12px;
   }
 
+  /* Projects */
+
   .projects-grid {
     grid-template-columns: 1fr;
     max-width: 460px;
@@ -1498,6 +1581,8 @@ h3 {
   .project-content {
     padding: 21px;
   }
+
+  /* Contact */
 
   .contact-content {
     text-align: center;
@@ -1511,6 +1596,8 @@ h3 {
     margin-inline: auto;
   }
 
+  /* Footer */
+
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -1518,17 +1605,29 @@ h3 {
   }
 }
 
+/* =========================================
+   15. EXTRA SMALL MOBILE
+========================================= */
+
 @media (max-width: 380px) {
   .logo {
     font-size: 14px;
   }
 
+  .hero {
+    padding-top: 95px;
+  }
+
+  .hero-container {
+    gap: 20px;
+  }
+
   .hero-title {
-    font-size: 32px;
+    font-size: 31px;
   }
 
   .hero-visual {
-    max-width: 260px;
+    max-width: 230px;
   }
 
   .timeline-card {
@@ -1545,7 +1644,7 @@ h3 {
 }
 
 /* =========================================
-   TOUCH DEVICES
+   16. TOUCH DEVICES
 ========================================= */
 
 @media (hover: none) {
@@ -1564,8 +1663,11 @@ h3 {
   .skill-card:hover h3,
   .skill-card:hover p,
   .skill-card:hover .skill-category {
-    color: inherit;
     transform: none;
+  }
+
+  .skill-card:hover h3 {
+    color: var(--text);
   }
 
   .skill-card:hover .skill-category {
@@ -1592,15 +1694,15 @@ h3 {
 }
 
 /* =========================================
-   REDUCED MOTION
+   17. REDUCED MOTION
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 
@@ -1614,124 +1716,5 @@ h3 {
 
   .typing-description::after {
     display: none !important;
-  }
-}
-
-/* ===================================
-   SKILLS CARD HOVER - WHITE TEXT
-=================================== */
-
-.skill-card:hover h3,
-.skill-card:hover .skill-category,
-.skill-card:hover p {
-  color: #ffffff !important;
-  transition: color 0.3s ease;
-}
-
-/* Skill logo color background */
-.skill-card:hover::before {
-  transform: translateY(0);
-}
-
-/* JavaScript card - white text */
-.skill-js:hover h3,
-.skill-js:hover .skill-category,
-.skill-js:hover p {
-  color: #ffffff !important;
-}
-
-/* Smooth hover effect */
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 35px rgba(30, 45, 65, 0.15);
-}
-
-/* =========================================
-   HERO SECTION - MOBILE SPACING FIX
-========================================= */
-
-@media (max-width: 600px) {
-
-  .hero {
-    padding-top: 100px;
-    padding-bottom: 45px;
-  }
-
-  .hero-container {
-    gap: 25px;
-  }
-
-  /* Availability label */
-  .availability {
-    margin-bottom: 12px;
-  }
-
-  /* HELLO, I'M */
-  .hero-greeting {
-    margin-bottom: 5px;
-  }
-
-  /* Name */
-  .hero-title {
-    line-height: 1.1;
-  }
-
-  .animated-name {
-    min-height: 1.1em;
-  }
-
-  /* Frontend Developer */
-  .hero-role {
-    margin: 10px 0;
-  }
-
-  .hero-role h2 {
-    line-height: 1.3;
-  }
-
-  /* Paragraph */
-  .hero-description {
-    line-height: 1.7;
-  }
-
-  .typing-description {
-    min-height: 8.5em;
-  }
-
-  /* Buttons */
-  .hero-buttons {
-    margin-top: 17px;
-    gap: 10px;
-  }
-
-  /* Social icons */
-  .hero-social {
-    margin-top: 20px;
-    gap: 12px;
-  }
-
-  /* Profile image */
-  .hero-visual {
-    max-width: 260px;
-  }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 380px) {
-
-  .hero {
-    padding-top: 95px;
-  }
-
-  .hero-container {
-    gap: 20px;
-  }
-
-  .hero-title {
-    font-size: 31px;
-  }
-
-  .hero-visual {
-    max-width: 230px;
   }
 }

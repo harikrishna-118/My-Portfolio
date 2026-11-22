@@ -1616,3 +1616,122 @@ h3 {
     display: none !important;
   }
 }
+
+/* ===================================
+   SKILLS CARD HOVER - WHITE TEXT
+=================================== */
+
+.skill-card:hover h3,
+.skill-card:hover .skill-category,
+.skill-card:hover p {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+/* Skill logo color background */
+.skill-card:hover::before {
+  transform: translateY(0);
+}
+
+/* JavaScript card - white text */
+.skill-js:hover h3,
+.skill-js:hover .skill-category,
+.skill-js:hover p {
+  color: #ffffff !important;
+}
+
+/* Smooth hover effect */
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(30, 45, 65, 0.15);
+}
+
+/* =========================================
+   HERO SECTION - MOBILE SPACING FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+
+  .hero-container {
+    gap: 25px;
+  }
+
+  /* Availability label */
+  .availability {
+    margin-bottom: 12px;
+  }
+
+  /* HELLO, I'M */
+  .hero-greeting {
+    margin-bottom: 5px;
+  }
+
+  /* Name */
+  .hero-title {
+    line-height: 1.1;
+  }
+
+  .animated-name {
+    min-height: 1.1em;
+  }
+
+  /* Frontend Developer */
+  .hero-role {
+    margin: 10px 0;
+  }
+
+  .hero-role h2 {
+    line-height: 1.3;
+  }
+
+  /* Paragraph */
+  .hero-description {
+    line-height: 1.7;
+  }
+
+  .typing-description {
+    min-height: 8.5em;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    margin-top: 17px;
+    gap: 10px;
+  }
+
+  /* Social icons */
+  .hero-social {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  /* Profile image */
+  .hero-visual {
+    max-width: 260px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 380px) {
+
+  .hero {
+    padding-top: 95px;
+  }
+
+  .hero-container {
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 31px;
+  }
+
+  .hero-visual {
+    max-width: 230px;
+  }
+}
